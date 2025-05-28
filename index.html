@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+  <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Solid Roofing - Unmatched Expertise in 7710 Southwest 62nd Avenue</title>
+    <script type="text/javascript">
+        var gk_isXlsx = false;
+        var gk_xlsxFileLookup = {};
+        var gk_fileData = {};
+        function filledCell(cell) {
+          return cell !== '' && cell != null;
+        }
+        function loadFileData(filename) {
+        if (gk_isXlsx && gk_xlsxFileLookup[filename]) {
+            try {
+                var workbook = XLSX.read(gk_fileData[filename], { type: 'base64' });
+                var firstSheetName = workbook.SheetNames[0];
+                var worksheet = workbook.Sheets[firstSheetName];
+
+                // Convert sheet to JSON to filter blank rows
+                var jsonData = XLSX.utils.sheet_to_json(worksheet, { header: 1, blankrows: false, defval: '' });
+                // Filter out blank rows (rows where all cells are empty, null, or undefined)
+                var filteredData = jsonData.filter(row => row.some(filledCell));
+
+                // Heuristic to find the header row by ignoring rows with fewer filled cells than the next row
+                var headerRowIndex = filteredData.findIndex((row, index) =>
+                  row.filter(filledCell).length >= filteredData[index + 1]?.filter(filledCell).length
+                );
+                // Fallback
+                if (headerRowIndex === -1 || headerRowIndex > 25) {
+                  headerRowIndex = 0;
+                }
+
+                // Convert filtered JSON back to CSV
+                var csv = XLSX.utils.aoa_to_sheet(filteredData.slice(headerRowIndex)); // Create a new sheet from filtered array of arrays
+                csv = XLSX.utils.sheet_to_csv(csv, { header: 1 });
+                return csv;
+            } catch (e) {
+                console.error(e);
+                return "";
+            }
+        }
+        return gk_fileData[filename] || "";
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Georgia', Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px 20px;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            display: flex;
+        }
+        .content {
+            width: 50%;
+            margin: 0 100px 0 150px;
+            text-align: left;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 15px;
+            background: #d40000;
+            padding: 5px;
+            color: #fff;
+            border-radius: 5px;
+        }
+        .header-advertorial {
+            font-size: 12px;
+            text-transform: uppercase;
+            opacity: 0.8;
+        }
+        .header-niche {
+            font-size: 16px;
+            margin: 3px 0;
+        }
+        .header-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .logo {
+            height: 40px;
+        }
+        .menu-btn {
+            cursor: pointer;
+            font-size: 18px;
+            color: #fff;
+        }
+        .menu-layer {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .menu-layer a {
+            color: #fff;
+            font-size: 20px;
+            margin: 15px 0;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .menu-layer a:hover {
+            text-decoration: underline;
+        }
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            font-size: 28px;
+            color: #fff;
+            cursor: pointer;
+        }
+        .headline {
+            font-size: 34px;
+            color: #333333;
+            margin: 15px 0;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        .byline {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .article-img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 8px;
+            border: 3px solid #ff0000;
+            border-radius: 5px;
+        }
+        .content p {
+            font-size: 18px;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .highlight {
+            color: #ff0000;
+            font-weight: bold;
+        }
+        .footer-logo {
+            height: 30px;
+            margin: 20px auto 10px auto;
+            display: block;
+        }
+        .plagiarism {
+            font-size: 24px;
+            color: #ff0000;
+            font-weight: 700;
+            margin: 20px auto 10px auto;
+            text-align: center;
+        }
+        .plagiarism-desc {
+            font-size: 14px;
+            color: #444;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .legal {
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .privacy-btn {
+            background: none;
+            border: none;
+            color: #ff0000;
+            text-decoration: underline;
+            cursor: pointer;
+            font-size: 12px;
+            display: block;
+            margin: 0 auto 20px auto;
+        }
+        .privacy-btn:hover {
+            color: #4a6db3;
+        }
+        .sources {
+            font-size: 12px;
+            color: #666;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+        .divider {
+            width: 80%;
+            height: 1px;
+            background: #ccc;
+            margin: 25px auto;
+        }
+        .quiz-embed {
+            margin: 20px 0;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .container {
+                display: block;
+            }
+            .content {
+                width: 100%;
+                margin: 0;
+            }
+            .headline {
+                font-size: 28px;
+                line-height: 1.1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="header">
+                <div class="header-advertorial">Advertorial</div>
+                <div class="header-niche">Roofing Solutions</div>
+                <div class="header-menu">
+                    <img src="https://dualitylabs.pro/images/logowhitesolid.png?_t=1740175634" alt="Logo" class="logo">
+                    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+                    <div class="menu-layer" id="menuLayer">
+                        <div class="close-btn" onclick="toggleMenu()">✖</div>
+                        <a href="rocksolid.news/privacy-policy">Privacy Policy</a>
+                        <a href="terms-of-service.html">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+
+            <h1 class="headline">Protect Your Home with Rock Solid Roofing - Your Trusted Experts in 7710 Southwest 62nd Avenue</h1>
+            <div class="byline">By Eric D. | Updated <span id="dynamicDate"></span></div>
+            
+            <div class="article-img"><img src="/src/pages/html-templates/images/metal-black-installation.jpg" alt="Selected image" style="width: 100%; height: auto; object-fit: cover;" /></div>
+
+            <p>Your home is more than just shelter—it's the foundation of your family's safety and comfort. At Rock Solid Roofing, we're committed to protecting that foundation with our <strong>comprehensive, expert roofing services</strong>. From emergency repairs to complete roof replacements, our services are designed to weather any storm that comes your way.</p>
+            
+            <p>Worried about the state of your roof? Let us put your mind at ease with a <span class="highlight">free inspection</span>! Our seasoned professionals will assess your roof's condition and provide honest advice on the right course of action.</p>
+
+            <p>For a limited time, we're offering <strong>$1000 OFF</strong> a full roof replacement for roofs 10 years or older. Don't let the fickle Florida weather compromise your family's safety. Act now and ensure your home remains a fortress against the elements.</p>
+            
+            <div class="article-img"><img src="/src/pages/html-templates/images/metal-black-installation.jpg" alt="Selected image" style="width: 100%; height: auto; object-fit: cover;" /></div>
+
+            <p>Here's what our satisfied customer, Vicky, had to say: "We are very happy that we found forever roofing company to help us. Eric was excellent, great customer service, and knowledgeable. He explained to us in detail about the roofing process, type of roofing, pros and cons. Definitely, I would recommend!"</p>
+
+            <p>We don’t just repair roofs; we build trust. Handling insurance claims can be a hassle, but our team is here to simplify the process, ensuring you get the coverage you deserve. Why wait for a leak to become a disaster? Call us today at <a href="tel:7868652728">786-865-2728</a> and secure your home's future.</p>
+
+            <div class="sources">Sources: Rock Solid Roofing (2023)</div>
+            <div class="divider"></div>
+            <img src="https://dualitylabs.pro/images/logoblacksolid.png?_t=1740175634" alt="Footer Logo" class="footer-logo">
+            <div class="plagiarism">Plagiarism Is a Crime</div>
+            <div class="plagiarism-desc">Swipe our article for a "special note" to your inbox.</div>
+            <div class="legal">Copyright © 2025 Rock Solid News. All rights reserved.</div>
+            <button class="privacy-btn" onclick="window.location.href='rocksolid.news/privacy-policy'">Privacy Policy</button>
+        </div>
+    </div>
+
+    <script>
+        // Toggle menu
+        function toggleMenu() {
+            const menu = document.getElementById('menuLayer');
+            menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
+        }
+
+        // Dynamic date
+        document.addEventListener('DOMContentLoaded', function() {
+            const date = new Date();
+            date.setHours(date.getHours() - 2);
+            const dynamicDateElement = document.getElementById('dynamicDate');
+            if (dynamicDateElement) {
+                dynamicDateElement.innerText = date.toLocaleString();
+            }
+        });
+    </script>
+</body>
+</html>
